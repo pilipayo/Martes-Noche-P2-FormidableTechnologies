@@ -9,7 +9,12 @@ public class Main {
         probarPila("Estrategia 1", p1);
         PilaTDAStr p2 = new Estrategia_1();
         Ej2("Ej2", p2);
+        PilaTDAStr p3 = new Estrategia_1();
+        Ej3("Ej3",p3);
+        PilaTDAStr p4 = new Estrategia_1();
+        Ej4("ALGORITMOS", p4);
         }
+
     public static void probarPila(String nombre, PilaTDAStr pila) {
         System.out.println("=== " + nombre + " ===");
 
@@ -83,5 +88,23 @@ public class Main {
         System.out.println("¿Pila vacía?: " + pila.PilaVacia());
 
         System.out.println();
+    }
+    public static void Ej4(String palabra, PilaTDAStr pila4) {
+        System.out.println("=== Ejercicio 4: " + palabra + " ===");
+
+        pila4.InicializarPila();
+        System.out.println("Agregando a la pila "+palabra);
+        for(int i=0; i< palabra.length();i++){
+            String letra = ""+ palabra.charAt(i);
+            pila4.Apilar(letra);
+            System.out.println("Apilando la letra..."+ letra);
+        }
+
+        System.out.println("Desapilando la palabra "+ palabra);
+        while(!pila4.PilaVacia()){
+            System.out.println("Desapilando... "+ pila4.Tope());
+            pila4.Desapilar();
+        }
+
     }
 }
