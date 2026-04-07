@@ -62,4 +62,26 @@ public class Main {
 
         System.out.println();
     }
+
+    public static void Ej3(String nombre, PilaTDAStr pila) {
+        System.out.println("=== " + nombre + " ===");
+
+        pila.InicializarPila();
+
+        pila.Apilar("(");
+        System.out.println("Agregando a la pila '('");
+        pila.Apilar("(");
+        System.out.println("Agregando a la pila '('");
+
+        System.out.println("Tope luego de abrir 2 paréntesis " + pila.Tope());
+        pila.Desapilar();
+        System.out.println("Tope luego de desapilar (cerrar paréntesis) una vez: **SI HAY PARÉNTESIS, SIGNIFICA QUE FALTA CERRAR ALGUNO** " + pila.Tope());
+
+        pila.Desapilar();
+        System.out.print("Tope luego de desapilar una vez más (cerrar paréntesis) **SI PILA VACÍA -> NO FALTA CERRAR PARÉNTESIS**: ");
+
+        System.out.println("¿Pila vacía?: " + pila.PilaVacia());
+
+        System.out.println();
+    }
 }
