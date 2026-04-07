@@ -13,6 +13,10 @@ public class Main {
         Ej3("Ej3",p3);
         PilaTDAStr p4 = new Estrategia_1();
         Ej4("ALGORITMOS", p4);
+
+
+        PilaTDAStr p6 = new Estrategia_1();
+        Ej6("Ej6", p6);
         }
 
     public static void probarPila(String nombre, PilaTDAStr pila) {
@@ -105,6 +109,31 @@ public class Main {
             System.out.println("Desapilando... "+ pila4.Tope());
             pila4.Desapilar();
         }
+    }
+    public static void Ej6(String nombre, PilaTDAStr pila) {
+
+        pila.InicializarPila();
+
+        String ubicacionActual = "C:/";
+        System.out.println("Ubicación actual: " + ubicacionActual);
+
+        pila.Apilar(ubicacionActual);
+        ubicacionActual = "Usuarios";
+        System.out.println("Entrando a: " + ubicacionActual);
+
+        pila.Apilar(ubicacionActual);
+        ubicacionActual = "Documentos";
+        System.out.println("Entrando a: " + ubicacionActual);
+
+        ubicacionActual = pila.Tope();
+        pila.Desapilar();
+        System.out.println("Subiendo un nivel. Ahora estamos en: " + ubicacionActual);
+
+        ubicacionActual = pila.Tope();
+        pila.Desapilar();
+        System.out.println("Subiendo un nivel. Ahora estamos en: " + ubicacionActual);
+
+        System.out.println("Pila vacia. Raíz del disco: " + pila.PilaVacia());
 
     }
 }
